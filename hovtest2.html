@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F1F1F1;
+        }
+
+        #main-content {
+            text-align: center;
+        }
+
+        #main-content img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        #sticky-menu {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #sticky-menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        #street-view {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #street-view img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        #info {
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #info h2 {
+            margin-bottom: 10px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .modal-button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="main-content">
+    <img src="hoverT.png" alt="#">
+</div>
+
+<div id="sticky-menu">
+    <a href="hov1.html">편의시설</a>
+    <a href="cap.html">택시 호출</a>
+    <a href="bus.html">버스 시간표 확인</a>
+</div>
+
+<div id="info" onclick="showModal()">
+    <img src="info.png" style="width: 35px; height: 35px; float: right; justify-content:right;" alt="">
+    <h2>주변의 스트리트 뷰</h2>
+    <p>이미지를 통해 주변 환경을 간단히 확인하세요.</p>
+</div>
+
+<div id="street-view">
+    <img src="st1.png" alt="#">
+    <img src="st2.png" alt="#">
+    <img src="st3.png" alt="#">
+    <img src="st4.png" alt="#">
+    <img src="st5.png" alt="#">
+    <img src="st6.png" alt="#">
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <p>현위치: 천안 버스 터미널<br>주변의 스트리트 뷰를 보며 현위치를 파악하세요!<br>도우미 하늘이를 호출할까요?</p>
+        <button class="modal-button" onclick="handleResponse(true)">예</button>
+        <button class="modal-button" onclick="handleResponse(false)">아니오</button>
+    </div>
+</div>
+
+<script>
+    function showModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "flex";
+    }
+
+    function handleResponse(response) {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+
+        if (response) { 
+            onclick=window.open('hovtest3.html')("도우미 하늘이 호출!");
+        } else {
+            alert("도우미 호출을 취소했습니다.");
+        }
+    }
+</script>
+
+</body>
+</html>

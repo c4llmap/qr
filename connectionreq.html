@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width,target-densitydpi=medium-dpi">
+<title>Flexer Server</title>
+<!--[if IE]>
+<style>
+@font-face {
+ font-family:'HWPserif';
+ src: url('HWPserif.eot');
+}
+@font-face {
+ font-family:'HWPserif';
+ src: url('HWPserifB.eot');
+ font-weight:bold;
+}
+@font-face {
+ font-family:'HWPsansserif';
+ src: url('HWPsansserif.eot');
+}
+@font-face {
+ font-family:'HWPsansserif';
+ src: url('HWPsansserifB.eot');
+ font-weight:bold;
+}
+</style>
+<![endif]-->
+<!--[if !IE]> -->
+<style>
+@font-face {
+ font-family:'HWPserif';
+ src: url('HWPserif.ttf') format('truetype'),
+ url('HWPserif.eot');
+}
+@font-face {
+ font-family:'HWPserif';
+ src: url('HWPserifB.ttf') format('truetype'),
+ url('HWPserifB.eot');
+ font-weight:bold;
+}
+@font-face {
+ font-family:'HWPsansserif';
+ src: url('HWPsansserif.ttf') format('truetype'),
+ url('HWPsansserif.eot');
+}
+@font-face {
+ font-family:'HWPsansserif';
+ src: url('HWPsansserifB.ttf') format('truetype'),
+ url('HWPsansserifB.eot');
+ font-weight:bold;
+}
+</style>
+<!-- <![endif]-->
+<style>
+table{border-collapse:collapse;}
+td{position:relative;}
+div{position:relative;}
+.gii-scaleX {
+	transform-origin:0% 0%;
+	-ms-transform-origin:0% 0%;
+	-webkit-transform-origin:0% 0%;
+}
+@media screen and (max-width: 636px) {
+   .gii-scaleX {
+        transform:scaleX(0.8);
+        -ms-transform:scaleX(0.8);
+        -webkit-transform:scaleX(0.8);
+	}
+}
+@media screen and (max-width: 557px) {
+   .gii-scaleX {
+        transform:scaleX(0.7);
+        -ms-transform:scaleX(0.7);
+        -webkit-transform:scaleX(0.7);
+	}
+}
+@media screen and (max-width: 480px) {
+   .gii-scaleX {
+        transform:scaleX(0.6);
+        -ms-transform:scaleX(0.6);
+        -webkit-transform:scaleX(0.6);
+	}
+}
+@media screen and (max-width: 400px) {
+   .gii-scaleX {
+		transform:scaleX(0.5);
+		-ms-transform:scaleX(0.5);
+		-webkit-transform:scaleX(0.5);
+	}
+}
+@media screen and (max-width: 320px) {
+   .gii-scaleX {
+		transform:scaleX(0.4);
+		-ms-transform:scaleX(0.4);
+		-webkit-transform:scaleX(0.4);
+	}
+}
+@media screen and (max-width: 239px) {
+   .gii-scaleX {
+		transform:scaleX(0.3);
+		-ms-transform:scaleX(0.3);
+		-webkit-transform:scaleX(0.3);
+	}
+}
+.gii-scale {
+	transform-origin:0% 0%;
+	-webkit-transform-origin:0% 0%;
+	-webkit-transform-origin:0% 0%;
+}
+@media screen and (max-width: 636px) {
+   .gii-scale {
+        transform:scale(0.8);
+        -ms-transform:scale(0.8);
+        -webkit-transform:scale(0.8);
+	}
+}
+@media screen and (max-width: 557px) {
+   .gii-scale {
+        transform:scale(0.7);
+        -ms-transform:scale(0.7);
+        -webkit-transform:scale(0.7);
+	}
+}
+@media screen and (max-width: 480px) {
+   .gii-scale {
+        transform:scale(0.6);
+        -ms-transform:scale(0.6);
+        -webkit-transform:scale(0.6);
+	}
+}
+@media screen and (max-width: 400px) {
+   .gii-scale {
+		transform:scale(0.5);
+		-ms-transform:scale(0.5);
+		-webkit-transform:scale(0.5);
+	}
+}
+@media screen and (max-width: 320px) {
+   .gii-scale {
+		transform:scale(0.4);
+		-ms-transform:scale(0.4);
+		-webkit-transform:scale(0.4);
+	}
+}
+@media screen and (max-width: 239px) {
+   .gii-scale {
+		transform:scale(0.3);
+		-ms-transform:scale(0.3);
+		-webkit-transform:scale(0.3);
+	}
+}
+.ps0 {
+ line-height:150.00%; text-align:left;text-indent:0;margin:0;}
+.ps1 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps2 {
+ line-height:130.00%; text-align:center;text-indent:0;margin:0;}
+.ps3 {
+ line-height:160.00%; text-align:center;text-indent:0;margin:0;}
+.ps4 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps5 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps6 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps7 {
+ line-height:160.00%; text-align:center;text-indent:0;margin:0;}
+.ps8 {
+ line-height:130.00%; text-align:center;text-indent:0;margin:0;}
+.ps9 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps10 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps11 {
+ line-height:160.00%; text-align:center;text-indent:0;margin:0;}
+.ps12 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps13 {
+ line-height:180.00%; text-align:justify;text-indent:0;margin:0;}
+.ps14 {
+ line-height:130.00%; text-align:justify;text-indent:0;margin:0;}
+.ps15 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps16 {
+ line-height:150.00%; text-align:center;text-indent:0;margin:0;}
+.ps17 {
+ line-height:180.00%; text-align:justify;text-indent:0;margin:0;}
+.ps18 {
+ line-height:130.00%; text-align:justify;text-indent:0;margin:0;}
+.ps19 {
+ line-height:150.00%; text-align:left;text-indent:0;margin:0;}
+.ps20 {
+ line-height:160.00%; text-align:left;text-indent:0;margin:0;}
+.ps21 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps22 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps23 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps24 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps25 {
+ line-height:100.00%; text-align:justify;text-indent:0;margin:0;}
+.ps26 {
+ line-height:160.00%; text-align:center;text-indent:0;margin:0;}
+.ps27 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps28 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps29 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps30 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps31 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps32 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps33 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps34 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps35 {
+ line-height:160.00%; text-align:center;text-indent:0;margin:0;}
+.ps36 {
+ line-height:160.00%; text-align:center;text-indent:0;margin:0;}
+.ps37 {
+ line-height:160.00%; text-align:center;text-indent:0;margin:0;}
+.ps38 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps39 {
+ line-height:160.00%; text-align:left;text-indent:0;margin:0;}
+.ps40 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps41 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps42 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps43 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps44 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps45 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps46 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps47 {
+ line-height:127.00%; text-align:left;text-indent:0;margin:0;}
+.ps48 {
+ line-height:105.00%; text-align:justify;text-indent:0;margin:0;}
+.ps49 {
+ line-height:105.00%; text-align:justify;text-indent:0;margin:0;}
+.ps50 {
+ line-height:110.00%; text-align:center;text-indent:0;margin:0;}
+.ps51 {
+ line-height:100.00%; text-align:center;text-indent:0;margin:0;}
+.ps52 {
+ line-height:105.00%; text-align:justify;text-indent:0;margin:0;}
+.ps53 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps54 {
+ line-height:175.00%; text-align:justify;text-indent:0;margin:0;}
+.ps55 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps56 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps57 {
+ line-height:180.00%; text-align:justify;text-indent:0;margin:0;}
+.ps58 {
+ line-height:160.00%; text-align:center;text-indent:0;margin:0;}
+.ps59 {
+ line-height:150.00%; text-align:center;text-indent:0;margin:0;}
+.ps60 {
+ line-height:130.00%; text-align:justify;text-indent:0;margin:0;}
+.ps61 {
+ line-height:130.00%; text-align:left;text-indent:0;margin:0;}
+.ps62 {
+ line-height:100.00%; text-align:justify;text-indent:0;margin:0;}
+.ps63 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps64 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps65 {
+ line-height:130.00%; text-align:center;text-indent:0;margin:0;}
+.ps66 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps67 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps68 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps69 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps70 {
+ line-height:100.00%; text-align:justify;text-indent:0;margin:0;}
+.ps71 {
+ line-height:130.00%; text-align:right;text-indent:0;margin:0;}
+.ps72 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps73 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps74 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps75 {
+ line-height:150.00%; text-align:center;text-indent:0;margin:0;}
+.ps76 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps77 {
+ line-height:150.00%; text-align:left;text-indent:0;margin:0;}
+.ps78 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps79 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps80 {
+ line-height:100.00%; text-align:center;text-indent:0;margin:0;}
+.ps81 {
+ line-height:160.00%; text-align:center;text-indent:0;margin:0;}
+.ps82 {
+ line-height:160.00%; text-align:left;text-indent:0;margin:0;}
+.ps83 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps84 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps85 {
+ line-height:190.00%; text-align:justify;text-indent:0;margin:0;}
+.ps86 {
+ line-height:180.00%; text-align:justify;text-indent:0;margin:0;}
+.ps87 {
+ line-height:180.00%; text-align:justify;text-indent:0;margin:0;}
+.ps88 {
+ line-height:130.00%; text-align:center;text-indent:0;margin:0;}
+.ps89 {
+ line-height:120.00%; text-align:center;text-indent:0;margin:0;}
+.ps90 {
+ line-height:130.00%; text-align:justify;text-indent:0;margin:0;}
+.ps91 {
+ line-height:175.00%; text-align:justify;text-indent:0;margin:0;}
+.ps92 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps93 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps94 {
+ line-height:175.00%; text-align:justify;text-indent:0;margin:0;}
+.ps95 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps96 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps97 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps98 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps99 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps100 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps101 {
+ line-height:100.00%; text-align:center;text-indent:0;margin:0;}
+.ps102 {
+ line-height:120.00%; text-align:center;text-indent:0;margin:0;}
+.ps103 {
+ line-height:130.00%; text-align:justify;text-indent:0;margin:0;}
+.ps104 {
+ line-height:140.00%; text-align:justify;text-indent:0;margin:0;}
+.ps105 {
+ line-height:130.00%; text-align:justify;text-indent:0;margin:0;}
+.ps106 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps107 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps108 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps109 {
+ line-height:160.00%; text-align:right;text-indent:0;margin:0;}
+.ps110 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps111 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps112 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps113 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps114 {
+ line-height:140.00%; text-align:justify;text-indent:0;margin:0;}
+.ps115 {
+ line-height:190.00%; text-align:center;text-indent:0;margin:0;}
+.ps116 {
+ line-height:180.00%; text-align:center;text-indent:0;margin:0;}
+.ps117 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps118 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps119 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps120 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps121 {
+ line-height:140.00%; text-align:justify;text-indent:0;margin:0;}
+.ps122 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps123 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps124 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps125 {
+ line-height:100.00%; text-align:justify;text-indent:0;margin:0;}
+.ps126 {
+ line-height:160.00%; text-align:center;text-indent:0;margin:0;}
+.ps127 {
+ line-height:140.00%; text-align:justify;text-indent:0;margin:0;}
+.ps128 {
+ line-height:120.00%; text-align:justify;text-indent:0;margin:0;}
+.ps129 {
+ line-height:100.00%; text-align:justify;text-indent:0;margin:0;}
+.ps130 {
+ line-height:135.00%; text-align:justify;text-indent:0;margin:0;}
+.ps131 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps132 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps133 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps134 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps135 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps136 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps137 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps138 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps139 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps140 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps141 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps142 {
+ line-height:140.00%; text-align:justify;text-indent:0;margin:0;}
+.ps143 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps144 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps145 {
+ line-height:105.00%; text-align:justify;text-indent:0;margin:0;}
+.ps146 {
+ line-height:105.00%; text-align:justify;text-indent:0;margin:0;}
+.ps147 {
+ line-height:105.00%; text-align:justify;text-indent:0;margin:0;}
+.ps148 {
+ line-height:105.00%; text-align:justify;text-indent:0;margin:0;}
+.ps149 {
+ line-height:105.00%; text-align:justify;text-indent:0;margin:0;}
+.ps150 {
+ line-height:105.00%; text-align:justify;text-indent:0;margin:0;}
+.ps151 {
+ line-height:105.00%; text-align:justify;text-indent:0;margin:0;}
+.ps152 {
+ line-height:180.00%; text-align:justify;text-indent:0;margin:0;}
+.ps153 {
+ line-height:120.00%; text-align:justify;text-indent:0;margin:0;}
+.ps154 {
+ line-height:180.00%; text-align:justify;text-indent:0;margin:0;}
+.ps155 {
+ line-height:180.00%; text-align:justify;text-indent:0;margin:0;}
+.ps156 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps157 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps158 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps159 {
+ line-height:140.00%; text-align:justify;text-indent:0;margin:0;}
+.ps160 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps161 {
+ line-height:100.00%; text-align:justify;text-indent:0;margin:0;}
+.ps162 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps163 {
+ line-height:160.00%; text-align:justify;text-indent:0;margin:0;}
+.ps164 {
+ line-height:150.00%; text-align:justify;text-indent:0;margin:0;}
+.ps165 {
+ line-height:140.00%; text-align:justify;text-indent:0;margin:0;}
+.ps166 {
+ line-height:160.00%; text-align:center;text-indent:0;margin:0;}
+.cs0 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs1 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:12.00pt; letter-spacing:-0.05em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs2 {
+/* '명조' */
+ font-family:'HWPserif'; font-size:10.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs3 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs4 {
+/* '한양신명조' */
+ font-family:'HWPserif'; font-size:14.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs5 {
+/* '한양중고딕' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:-0.10em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs6 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs7 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:24.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs8 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:14.00pt; letter-spacing:-0.05em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs9 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:16.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs10 {
+/* '바탕' */
+ font-family:'HWPserif'; font-size:6.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-decoration:underLine; text-shadow: none;}
+.cs11 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs12 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs13 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs14 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:16.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs15 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:14.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs16 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs17 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs18 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:italic; font-weight:normal; color:#404040; text-shadow: none;}
+.cs19 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:italic; font-weight:normal; color:#000000; text-shadow: none;}
+.cs20 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:italic; font-weight:normal; color:#5B9BD5; text-shadow: none;}
+.cs21 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#5A5A5A; text-shadow: none;}
+.cs22 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#5B9BD5; text-shadow: none;}
+.cs23 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:italic; font-weight:bold; color:#000000; text-shadow: none;}
+.cs24 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:16.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#2E74B5; text-shadow: none;}
+.cs25 {
+/* '바탕' */
+ font-family:'HWPserif'; font-size:17.25pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs26 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:17.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs27 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs28 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs29 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.12em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs30 {
+/* 'HY울릉도B' */
+ font-family:'HWPsansserif'; font-size:23.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs31 {
+/* 'HY울릉도B' */
+ font-family:'HWPsansserif'; font-size:23.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs32 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:12.00pt; letter-spacing:-0.15em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs33 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.13em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs34 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.10em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs35 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.04em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs36 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.05em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs37 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.15em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs38 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.25em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs39 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs40 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:7.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs41 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs42 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs43 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.03em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs44 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.04em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs45 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs46 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.15em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs47 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.11em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs48 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.09em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs49 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:0.08em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs50 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.14em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs51 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs52 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:22.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs53 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs54 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:22.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs55 {
+/* 'HY울릉도B' */
+ font-family:'HWPsansserif'; font-size:18.00pt; letter-spacing:-0.08em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs56 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:30.00pt; letter-spacing:0.50em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs57 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.50em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs58 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs59 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:16.00pt; letter-spacing:-0.03em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs60 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#191919; text-shadow: none;}
+.cs61 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#191919; text-shadow: none;}
+.cs62 {
+/* '휴먼고딕' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs63 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:12.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs64 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:12.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-decoration:underLine; text-shadow: none;}
+.cs65 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:24.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs66 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:14.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs67 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:14.00pt; letter-spacing:-0.11em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs68 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:14.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs69 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:14.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs70 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:14.00pt; letter-spacing:-0.03em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs71 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:14.00pt; letter-spacing:-0.04em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs72 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:14.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs73 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs74 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs75 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs76 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.10em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs77 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:14.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#FF0000; text-shadow: none;}
+.cs78 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs79 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs80 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.05em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs81 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs82 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.05em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs83 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:14.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs84 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs85 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs86 {
+/* '한양신명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs87 {
+/* '한양중고딕' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:-0.07em; font-style:normal; font-weight:normal; color:#0000FF; text-shadow: none;}
+.cs88 {
+/* '한양중고딕' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:-0.07em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs89 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:17.00pt; letter-spacing:-0.08em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs90 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:17.00pt; letter-spacing:-0.07em; font-style:normal; font-weight:normal; color:#315F97; text-shadow: none;}
+.cs91 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:32.00pt; letter-spacing:0.15em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs92 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.22em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs93 {
+/* '한양견고딕' */
+ font-family:'HWPsansserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs94 {
+/* '굴림' */
+ font-family:'HWPsansserif'; font-size:24.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs95 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:16.00pt; letter-spacing:-0.03em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs96 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:18.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs97 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:18.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#0059FF; text-shadow: none;}
+.cs98 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:16.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs99 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:16.00pt; letter-spacing:-0.03em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs100 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:17.00pt; letter-spacing:-0.14em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs101 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:20.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs102 {
+/* '굴림' */
+ font-family:'HWPsansserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs103 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:20.00pt; letter-spacing:-0.14em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs104 {
+/* '한양견고딕' */
+ font-family:'HWPsansserif'; font-size:28.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs105 {
+/* '한양견고딕' */
+ font-family:'HWPsansserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs106 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:24.00pt; letter-spacing:0.01em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs107 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs108 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs109 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs110 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:16.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#FFFFFF; text-shadow: none;}
+.cs111 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:16.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs112 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs113 {
+/* '한양중고딕' */
+ font-family:'HWPsansserif'; font-size:13.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#0000FF; text-shadow: none;}
+.cs114 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#FF0000; text-shadow: none;}
+.cs115 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:8.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs116 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs117 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs118 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs119 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.08em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs120 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.04em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs121 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.04em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs122 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.10em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs123 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.10em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs124 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.10em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs125 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs126 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:32.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs127 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.02em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs128 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.02em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs129 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs130 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.12em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs131 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs132 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs133 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.08em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs134 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.04em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs135 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.04em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs136 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:14.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs137 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.10em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs138 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.10em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs139 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.10em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs140 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs141 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs142 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs143 {
+/* '한양중고딕' */
+ font-family:'HWPsansserif'; font-size:13.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs144 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs145 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs146 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:15.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs147 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs148 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:14.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs149 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:14.00pt; letter-spacing:0.07em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs150 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:12.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs151 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs152 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs153 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs154 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:0.07em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs155 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:13.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs156 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:-0.04em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs157 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:12.00pt; letter-spacing:-0.04em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs158 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:12.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs159 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:16.00pt; letter-spacing:-0.04em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs160 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs161 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:13.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs162 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.10em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs163 {
+/* '신명 태명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.10em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs164 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs165 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:12.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs166 {
+/* 'HY헤드라인M' */
+ font-family:'HWPsansserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs167 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:11.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs168 {
+/* 'NanumGothic' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs169 {
+/* '신명 태고딕' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs170 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:12.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs171 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:12.00pt; letter-spacing:0.04em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs172 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:12.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs173 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs174 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:16.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs175 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:6.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs176 {
+/* '신명 태고딕' */
+ font-family:'HWPsansserif'; font-size:20.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-decoration:underLine; text-shadow: none;}
+.cs177 {
+/* '굴림' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:0.00em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs178 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:14.00pt; letter-spacing:-0.16em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs179 {
+/* '굴림체' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:0.00em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs180 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs181 {
+/* '한양중고딕' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:-0.08em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs182 {
+/* '한양중고딕' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:-0.11em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs183 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.12em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs184 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.14em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs185 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:15.00pt; letter-spacing:-0.08em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs186 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.18em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs187 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.03em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs188 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.17em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs189 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.31em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs190 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.16em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs191 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.21em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs192 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.25em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs193 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:11.00pt; letter-spacing:-0.19em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs194 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.06em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs195 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.19em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs196 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.20em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs197 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.12em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs198 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.15em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs199 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.09em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs200 {
+/* '한양중고딕' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:-0.07em; font-style:normal; font-weight:bold; color:#000000; text-shadow: none;}
+.cs201 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.11em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs202 {
+/* '휴먼명조' */
+ font-family:'HWPserif'; font-size:13.00pt; letter-spacing:-0.08em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs203 {
+/* '한양중고딕' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:-0.04em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs204 {
+/* '한양중고딕' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:-0.08em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+.cs205 {
+/* '한양중고딕' */
+ font-family:'HWPsansserif'; font-size:12.00pt; letter-spacing:-0.09em; font-style:normal; font-weight:normal; color:#000000; text-shadow: none;}
+div, p { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQIW2NkAAIAAAoAAggA9GkAAAAASUVORK5CYII=);  }
+</style>
+<style>
+v\:image{ behavior:url(#default#VML);display:inline-block;position:absolute;left:0px;top:0px;}
+v\:imagedata{ behavior:url(#default#VML);}
+v\:stroke { behavior:url(#default#VML);}
+v\:fill { behavior:url(#default#VML);}
+v\:rect { behavior:url(#default#VML);display:inline-block;position:absolute;left:0px;top:0px; }
+v\:oval { behavior:url(#default#VML);display:inline-block;position:absolute;left:0px;top:0px; }
+v\:group { behavior:url(#default#VML);display:inline-block;}
+v\:polyline { behavior:url(#default#VML);inline-block;position:absolute;left:0px;top:0px;}
+v\:shape { behavior:url(#default#VML);display:inline-block;position:absolute;left:0px;top:0px;background:transparent;width:100%;height:100%;}
+v\:path { behavior:url(#default#VML);display:inline-block;position:absolute;left:0px;top:0px;}
+o\:* { behavior:url(#default#VML);display:inline-block;}
+</style>
+</head>
+<body style=" padding:0; margin:auto; word-break:break-all; -webkit-text-size-adjust:none;">
+<div style="position:relative; max-width:481.90pt; margin:0 auto 0 auto; padding:0 4pt 0 4pt;">
+<div style="position:relative; margin-top:56.69pt; margin-left:0pt; margin-bottom:42.51pt; width:100%; min-height:742.68pt; ">
+<div name="header" style="width:100%; min-height:42.51pt; ">
+</div>
+<div name="FlexerServerView" style="position:relative; padding:0; margin:0; width:100%; min-height:657.66pt; ">
+<p class="ps59 cs89" style=" margin:0.00pt 2.08% 0.00pt 0.00%;"><br></p>
+<p class="ps59 cs89" style=" margin:0.00pt 2.08% 0.00pt 0.00%;"><br></p>
+<p class="ps59 cs89" style=" margin:0.00pt 2.08% 0.00pt 0.00%;">천안시 지역상생형<span style=" letter-spacing:-0.07em; color:#8b0000;"></span></p>
+<p class="ps101 cs91" style="">대학생 사업연계 제안요청서</p>
+<div style="position:relative; ">
+<div style="position:absolute; left:0.00%; top:4.41pt; z-index:38; border:solid #8b0000 1.00px; background:-webkit-linear-gradient(left , #8b0000, #8b0000); width:100.00%; min-height:4.67pt;">
+    <td style=" border-top:solid #8b0000 1.00px; border-left:none #8b0000 1.00px; border-right:none #8b0000 1.00px; border-bottom:double #8b0000 5.67px; padding:1.41pt; height:68.75pt;">
+<path d=" M0,0 L48370,0 L48370,467 L0,467 z " style="stroke:#CCFFFF;stroke-width:82;fill:url(#grad1);"></path>
+<defs>
+<lineargradient id="grad1" spreadMethod="reflect" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" style="stop-color:#000080;"></stop>
+<stop offset="100%" style="stop-color:#99CCFF;"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+</div>
+<p class="ps81 cs92" style=""><br></p>
+<p class="ps81 cs93" style=""><br></p>
+<p class="ps81 cs93" style=""><br></p>
+<p class="ps81 cs93" style=""><br></p>
+<div class="ps81 cs94" style=""><table style="width:92.36%;vertical-align:text-bottom; display:inline-block; margin-top:1.40pt; margin-right:0.00pt; margin-bottom:1.40pt; margin-left:0.00pt; z-index:13;">
+<colgroup>
+<col style="width:68.02pt;"><col style="width:377.05pt;">
+</colgroup>
+<tbody><tr>
+<td style=" border:solid #000000 1.00px; padding:1.40pt; height:50.13pt;">
+<p class="ps7 cs95" style=" line-height:100%;">사 업 명</p>
+</td>
+<td style=" border:solid #000000 1.00px; padding:1.40pt; height:50.13pt;">
+<p class="ps59 cs96" style=" line-height:100%; margin:0.00pt 2.65% 0.00pt 0.00%;">지역 교통 서비스 통합 제안 <br>(Call Map)<span style=" color:#0059FF;"></span></p>
+</td>
+</tr>
+<tr>
+<td style=" border:solid #000000 1.00px; padding:1.40pt; height:44.30pt;">
+<p class="ps7 cs95" style="">주관</p>
+<!--p class="ps7 cs95" style="">교육청</p-->
+</td>
+<td style=" border:solid #000000 1.00px; padding:1.40pt; height:44.30pt;">
+<p class="ps7 cs98" style=" line-height:100%;">천안시청</p>
+</td>
+</tr>
+<tr>
+<td style=" border:solid #000000 1.00px; padding:1.40pt; height:52.83pt;">
+<p class="ps3 cs99" style=" line-height:100%;">담당부서</p>
+</td>
+<td style=" border:solid #000000 1.00px; padding:1.40pt; height:52.83pt;">
+<p class="ps102 cs100" style="">천안시 시장 박상돈</p>
+<p class="ps102 cs101" style="">TEL <a href="tel:044-320-3417" target="_blank">(041)903-521-5332</a></p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p class="ps82 cs102" style=" margin:0.00pt 0.00% 0.00pt 3.11%;"><br></p>
+<p class="ps3 cs103" style=""><br></p>
+<p class="ps3 cs103" style=""><br></p>
+<p class="ps3 cs103" style="">20</p>
+<p class="ps81 cs93" style=""><br></p>
+<p class="ps81 cs93" style=""><br></p>
+<div class="ps50 cs104" style=""><div style="position:relative;vertical-align:text-bottom; display:inline-block; margin:0.00pt; z-index:14; width:33.68%;">
+<div style="position:relative; border:solid transparent 1px; width:100%;">
+<div style="margin-top:25.07%;line-height:100%;font-size:1pt;">&nbsp;</div>
+<!--[if lt IE 9]><v:shape style="z-index:-1;rotation:0;width:100.00%;height:100.00%;left:0.00%;top:0.00%" coordsize="16231 4068" path="m0,0 l16231,0 l16231,4068 l0,4068 x e"  stroked="false" >
+<v:imagedata src="bindatas/BIN0001.bmp"  cropright="0.00" /></v:shape>
+<![endif]-->
+<!--svg style="z-index:-1;overflow:hidden;position:absolute;left:0;top:0;background:transparent;width:100%;height:100%;" preserveAspectRatio="none" viewBox="0 0 16231 4069" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"-->
+<img src="chmark.png" alt="" style="align-items:center; text-align:center; margin-left: -77%; margin-bottom: 20px; margin-top: -50px;">
+<defs>
+</defs>
+<rect x="0" y="0" width="16231" height="4068" style="stroke:none;fill:url(#pat1);"></rect>
+</svg>
+</div></div></div>
+<p class="ps50 cs105" style="">[ 천 안 시 청 ]</p>
+</div>
+<div name="footer" style="width:100%; min-height:42.51pt; ">
+</div>
+</div></div>
+<div style="background-color:#808080; width:100%; height:10pt; "></div>
+<div style="position:relative; max-width:481.90pt; margin:0 auto 0 auto; padding:0 4pt 0 4pt;">
+<div style="position:relative; margin-top:56.69pt; margin-left:0pt; margin-bottom:42.51pt; width:100%; min-height:742.68pt; ">
+<div name="header" style="width:100%; min-height:42.51pt; ">
+</div>
+<div name="FlexerServerView" style="position:relative; padding:0; margin:0; width:100%; min-height:657.66pt; ">
+<div class="ps115 cs106" style=""><table style="width:91.78%;vertical-align:text-bottom; display:inline-block; margin-top:2.83pt; margin-right:0.00pt; margin-bottom:2.83pt; margin-left:0.00pt; z-index:15;">
+<colgroup>
+<col style="width:442.28pt;">
+</colgroup>
+<tbody><tr>
+<td style=" border-top:solid #8b0000 1.00px; border-left:none #8b0000 1.00px; border-right:none #8b0000 1.00px; border-bottom:double #8b0000 5.67px; padding:1.41pt; height:68.75pt;">
+<p class="ps59 cs89" style=" margin:0.00pt 2.26% 0.00pt 0.00%;">지역 교통 서비스 통합을 통한 효율적인 이용과 <br>리소스 활용을 위한 사업</p>
+<p class="ps116 cs126" style="">제안요청서</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p class="ps97 cs79" style="">□ 사업 개요<span style=" font-size:20.00pt; line-height:160.00%;"></span></p>
+<p class="ps20 cs10" style=""><br></p>
+<p class="ps96 cs78" style=" margin:0.00pt 0.00% 0.00pt 1.56%;">◦ 추진목적</p>
+<p class="ps133 cs78" style=" text-indent:0.02%; margin:0.00pt 0.00% 0.00pt 6.21%;"><span style=" letter-spacing:-0.02em;">지역상생과 리소스 절약을 위한 택시 및 버스 관련 어플 통합화 및 사업연계.</span></p>
+<p class="ps98 cs78" style=" margin:0.00pt 0.00% 0.00pt 1.56%;">◦ 추진배경 <span style=" font-weight:normal;"></span></p>
+<p class="ps134 cs11" style=" text-indent:-3.14%; margin:0.00pt 0.00% 0.00pt 7.80%;">-  <span>택시 및 버스 관련 어플의 분산된 서비스로 인한 이용자 혼란과 <span style="font-weight:bold;">리소스의 중복 낭비</span>를 해소</span></p>
+<p class="ps135 cs11" style=" text-indent:-2.64%; margin:0.00pt 0.00% 0.00pt 7.31%;">-  <span>지역 교통 환경을 <span style=" font-weight:bold;">개선</span>하여 지역경제 발전과 시민의 <span style=" font-weight:bold;">편의성 증진</span>을 도모</span></p>
+<p class="ps135 cs11" style=" text-indent:-2.64%; margin:0.00pt 0.00% 0.00pt 7.31%;">-  <span>지역 교통 환경을 <span style=" font-weight:bold;">통합</span>적인 <span style=" font-weight:bold;">어플리케이션을 개발</span>하고 이를 통한 <span style=" font-weight:bold;">사업연계</span>를 추진</span></p>
+<p class="ps96 cs11" style=" margin:0.00pt 0.00% 0.00pt 1.56%;"><br></p>
+<p class="ps136 cs78" style=" text-indent:-5.45%; margin:0.00pt 0.00% 0.00pt 7.01%;">◦ <span style=" font-weight:normal;">천안시와의 사업 연계로 분산화 되어 있는 <span style=" font-weight:bold;">서로 다른 플랫폼을 하나로 묶을 것</span>을 권유합니다. <br>이는 이용자들에게 더 나은 서비스를 제공할 뿐만 아니라, <span style=" font-weight:bold;">지역사회의 교통 환경을 개선</span>하고, <span style=" font-weight:bold;">리소스를 효율</span>적으로 활용할 수 있는 기회를 제공할 것입니다. <br><br><span style=" font-weight:bold;">천안시</span>의 적극적인 참여와 지원이 이 사업의 성공에 중요한 역할을 할 것으로 기대됩니다.</span></p>
+<p class="ps132 cs78" style=" text-indent:-6.93%; margin:0.00pt 0.00% 0.00pt 6.93%;"><br></p>
+</div>
+
+
+</body></html>

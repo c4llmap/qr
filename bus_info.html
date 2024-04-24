@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F1F1F1;
+            color: #333;
+        }
+
+        #bus-info {
+            padding: 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #next-buses {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .box{
+            border: 1px solid #ffe4c4;
+            width: 100%;
+            height: auto;
+            margin:0 0 15px 0;
+            float: left;
+            background-color: #ffa07a;
+        }
+        .box h3{
+            float: left;
+            margin-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h3>내 주변 버스 정보</h3><img src="bus_stop.png" style="width: 45px; height: auto;" alt="">
+    </div>
+    <div id="bus-info">
+        <h2>버스 정보</h2>
+        <p>버스 번호: 14</p>
+        <p>출발지: 백석대학교(운동장)</p>
+        <p>도착지: 백석초등학교</p>
+
+        <h2>버스 정보</h2>
+        <p>버스 번호: 700</p>
+        <p>출발지: 안서동(문암)</p>
+        <p>도착지: 전의읍내리(종점)</p>
+
+        <h2>버스 정보</h2>
+        <p>버스 번호: 701</p>
+        <p>출발지: 안서동(문암)</p>
+        <p>도착지: 전의읍내리(종점)</p>
+    </div>
+
+    <div id="next-buses">
+        <h2>다음 버스</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>버스 번호</th>
+                    <th>도착 예정 시간</th>
+                    <th>도착지</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>14</td>
+                    <td style="color:red;"><b>잠시후 도착</b></td>
+                    <td>단국대학교병원</td>
+                </tr>
+                <tr>
+                    <td>700</td>
+                    <td style="color:red;"><b>약 3분후 도착</b></td>
+                    <td>전의읍내리(종점)</td>
+                </tr>
+                <tr>
+                    <td>701</td>
+                    <td style="color:red;">약 4분후 도착</td>
+                    <td>전의읍내리(종점)</td>
+                </tr>
+                <tr>
+                    <td>702</td>
+                    <td>약 12분후 도착</td>
+                    <td>행정리</td>
+                </tr>
+                <tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

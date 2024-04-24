@@ -1,0 +1,212 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Document</title>
+        <style>
+            html,
+            body {
+                background-color: #F1F1F1;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: auto; /* 최대 너비 설정 */
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #FFF;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(212, 165, 165, 0.1);
+            }
+
+            .image-container {
+                flex: 1;
+                padding: 20px;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            .form-container {
+                flex: 2;
+                padding: 20px;
+            }
+
+            .input-group {
+                margin-bottom: 20px;
+            }
+
+            .input-group label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            .input-group input {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+
+            .input-group button {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                background-color: dodgerblue;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .input-group button:hover {
+                background-color: dodgerblue;
+            }
+
+            .box{
+                width: 85%;
+                height: 30%;
+                border: 0px solid;
+                border-radius: 10px;
+                background-color: #f1f1f1;
+                display: inline-block;
+                box-shadow: 2px 1px 22px -1px rgba(0,0,0,0.7);
+-webkit-box-shadow: 2px 1px 22px -1px rgba(0,0,0,0.7);
+-moz-box-shadow: 2px 1px 22px -1px rgba(0,0,0,0.7);
+                margin-top: 30px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-left: 8%;
+            }
+
+            .box2{
+                width: 85%;
+                height: auto;
+                border: 0 solid;
+                border-radius: 10px;
+                background-color: #F1F1F1;
+                box-shadow: 2px 1px 22px -1px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 2px 1px 22px -1px rgba(0,0,0,0.75);
+                -moz-box-shadow: 2px 1px 22px -1px rgba(0,0,0,0.75);
+                display: inline-block;
+                margin-top: 30px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-left: 8%;
+            }
+
+            .imgwide{
+                border: 0 solid;
+                border-radius: 10px;
+            }
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(2, 2fr);
+                grid-gap: 5px;
+            }
+
+            .gridBox{
+                width: 130px;
+                height: 120px;
+                border: 0px solid;
+                border-radius: 10px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: dodgerblue;
+                margin-left: 15.5%;
+                margin-top: 30px;
+            }
+
+            .box_2 {
+        width: 70%;
+        height: flex;
+        background-color: dodgerblue;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    a {
+        text-decoration: none;
+        text-align: center;
+        color: seashell;
+    }
+
+    @media screen and (max-width: 767px){
+        h4 {
+            font-size: 1.2rem;
+        }
+    }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="image-container">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.9841 4.99255C12.9841 4.44027 13.4318 3.99255 13.9841 3.99255C14.3415 3.99255 14.6551 4.18004 14.8319 4.46202L17.5195 7.14964C17.9101 7.54016 17.9101 8.17333 17.5195 8.56385C17.129 8.95438 16.4958 8.95438 16.1053 8.56385L14.9841 7.44263V14.9926C14.9841 15.5448 14.5364 15.9926 13.9841 15.9926C13.4318 15.9926 12.9841 15.5448 12.9841 14.9926V5.042C12.984 5.03288 12.984 5.02376 12.9841 5.01464V4.99255Z" fill="currentColor" /><path d="M11.0159 19.0074C11.0159 19.5597 10.5682 20.0074 10.0159 20.0074C9.6585 20.0074 9.3449 19.82 9.16807 19.538L6.48045 16.8504C6.08993 16.4598 6.08993 15.8267 6.48045 15.4361C6.87098 15.0456 7.50414 15.0456 7.89467 15.4361L9.01589 16.5574V9.00745C9.01589 8.45516 9.46361 8.00745 10.0159 8.00745C10.5682 8.00745 11.0159 8.45516 11.0159 9.00745V18.958C11.016 18.9671 11.016 18.9762 11.0159 18.9854V19.0074Z" fill="currentColor" /></svg>
+            </div>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="start">출발지:</label>
+                    <input type="text" id="start" placeholder="출발지를 입력하세요">
+                </div>
+                <div class="input-group">
+                    <label for="destination">도착지:</label>
+                    <input type="text" id="destination" placeholder="도착지를 입력하세요">
+                </div>
+                <div class="input-group">
+                    <button>검색</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="kakaomap.png" class="imgwide" onclick="window.open('hovtest2.html')" style="width: 100%; height: 100%;">
+        </div>
+
+        <div class="box2">
+            <img src="route.png" class="imgwide">
+        </div>
+
+        <div class="grid">
+            <div class="box_2">
+                <a href="bus_info.html" id="voice-search">
+                    <img src="bus_stop.png" style="font-size:35px; margin-bottom: -10px; padding-top: 15px; color: seashell; height: 50px;" alt="">
+                    <h4 id="voice-status">버스정보</h4>
+                </a>
+            </div>
+
+
+            <div class="box_2">
+                <a href="https://play.google.com/store/apps/details?id=com.enp.client.c.cheonahn&hl=ko&gl=US" id="voice-search">
+                    <i class="fa fa-cab" style="font-size:35px; margin-bottom: -10px; padding-top: 15px; color: seashell; height: 50px;"></i>
+                    <h4 id="voice-status">택시 호출</h4>
+                </a>
+            </div>
+        </div>
+    </body>
+
+    </html>

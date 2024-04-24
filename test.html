@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    html,
+    body {
+        background-color: #F1F1F1;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .grid {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
+
+    .box {
+        width: 70%; /* 변경된 부분: box의 사이즈를 조정 */
+        color: aliceblue;
+        background-color: dodgerblue;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    h4 {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: seashell;
+        margin-top: 10px;
+    }
+
+    .input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #000;
+        color: #000;
+        box-sizing: border-box;
+        font-family: 'Arvo';
+        font-size: 18px;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    input::placeholder {
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    input:focus::placeholder {
+        color: dodgerblue;
+    }
+
+    .underline {
+        background-color: dodgerblue;
+        display: inline-block;
+        height: 2px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* 변경된 부분: 오른쪽 정렬로 변경 */
+        margin-right: 10px;
+    }
+
+    @media screen and (max-width: 767px) {
+        .grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        .box {
+            width: 90%; /* 변경된 부분: 모바일 환경에 맞춰 사이즈 조정 */
+        }
+
+        h4 {
+            font-size: 1.2rem;
+        }
+
+        .input {
+            font-size: 18px;
+        }
+
+        .search-container {
+            justify-content: center;
+            margin: 0 auto;
+            width: 100%; /* 변경된 부분: 모바일 환경에서 가득 차도록 너비 조정 */
+        }
+    }
+</style>
+
+<body>
+    <div class="grid">
+        <div class="search-container">
+            <div class="wrapper">
+                <img src="search.png" style="width: 35px; height: 35px; position: absolute;" alt="">
+                <input class="input" placeholder="백석대학교" type="text" id="destination-input">
+                <span class="underline"></span>
+            </div>
+            <div class="box" style="width: auto; height: auto">
+                <a href="#" id="voice-search">
+                    <i class="fa fa-microphone" style="font-size:25px; color: seashell;"></i>
+                    <h4 id="voice-status">길찾기</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const voiceSearchButton = document.getElementById("voice-search");
+        const destinationInput = document.getElementById("destination-input");
+        const voiceStatus = document.getElementById("voice-status");
+
+        // 음성 인식 버튼 클릭 시 음성 인식 시작
+        voiceSearchButton.addEventListener("click", () => {
+            if ('webkitSpeechRecognition' in window) {
+                const recognition = new webkitSpeechRecognition();
+                recognition.continuous = false;
+                recognition.interimResults = false;
+                recognition.lang = 'ko-KR';
+
+                recognition.start();
+
+                recognition.onstart = () => {
+                    voiceStatus.innerText = "음성 인식 중...";
+                    voiceStatus.classList.add("listening");
+                };
+
+                recognition.onresult = (event) => {
+                    const result = event.results[0][0].transcript;
+                    destinationInput.value = result;
+                };
+
+                recognition.onend = () => {
+                    recognition.stop();
+                    voiceStatus.innerText = "목적지 찾기";
+                    voiceStatus.classList.remove("listening");
+                };
+            } else {
+                alert('음성 인식을 지원하지 않는 브라우저입니다.');
+            }
+        });
+    </script>
+</body>
+
+</html>

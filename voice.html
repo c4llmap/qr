@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .header {
+            background-color: dodgerblue;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        .illustration {
+            margin-top: 50px;
+
+        }
+
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            grid-gap: 3%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .con{
+            width: 100%;
+            height: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 35px;
+            margin-bottom: 35px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+        .imgcontainer{
+            margin-left: 50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 100px;
+            border: 0px solid;
+            border-radius: 15px;
+            box-shadow: 2px 1px 22px -1px rgba(0, 0, 0, 0.7);
+            -webkit-box-shadow: 2px 1px 22px -1px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: 2px 1px 22px -1px rgba(0, 0, 0, 0.7);
+        }
+        h4{
+            font-size: 1rem;
+        }
+
+        #robot-container {
+        width: 75px;
+        height: 75px;
+        align-items: center;
+        text-align: center;
+        justify-content:center;
+        float: center;
+        margin-left: 38.5%;
+    }
+
+    #robot-image {
+        width: 100%;
+        height: 100%;
+        border: 0px solid;
+        border-radius: 50px;
+    }
+
+        @media screen and (max-width: 600px) {
+            .header {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .cta-button {
+                font-size: 16px;
+            }
+
+            .illustration {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>보이서 헬퍼<br> 새싹이를 소개합니다!</h1>
+        <div id="robot-container">
+            <img id="robot-image" src="robot.jpg" alt="Robot">
+            <div class="speech-bubble" id="speech-bubble"></div>
+        </div>
+        <p><b>콜맵의 귀여운 도우미 새싹이는 <br>시각적으로만 정보를 전달하던 기존의 지도에서<br> 보이스 헬퍼 시스템을 적극 활용하여 지도를 입체적으로 전달해 드립니다.</b></p>
+        <a href="https://c4llmap.github.io/callmap3/test3.html" class="cta-button">새싹이 사용하러 가기</a>
+    </div>
+    <!--div class="illustration">
+        <img src="text-to-speech-illustration.svg" alt="Text to Speech Illustration">
+    </div-->
+
+    <div class="con">
+        <div class="grid">
+            <h4><b style="font-size: 1.2rem; color: dodgerblue;">Text to Speech</b> 기술을 기반으로 콜맵을 이용함에 있어 불편함이 없도록 모든 정보를 <b style="font-size: 1.2rem; color: dodgerblue;">음성</b>으로 전달</h4>
+            <img src="ttos.png" style="margin-right: 15px;" class="imgcontainer" alt="">
+        </div>
+    </div>
+    
+    <hr style="width: 90%; border: 1px solid dodgerblue; font-size: 2px;">
+
+    <div class="con">
+        <div class="grid">
+            <img src="ttos3.png" alt="" style="width: 180px; margin-left: 15px;" class="imgcontainer">
+            <h4 style="font-size: 0.9rem; margin-right: 15px;">현재 위치에서 주변의 시설들을 <b style="font-size: 1.2rem; color: dodgerblue;">음성</b>으로 알려주어, <br>시각적 제한이 있는 사용자들도 <b style="font-size: 1.2rem; color: dodgerblue;">주변 환경</b>을 쉽게 파악가능</h4>
+        </div>
+    </div>
+
+    <hr style="width: 90%; border: 1px solid dodgerblue; font-size: 2px;">
+
+    <div class="con">
+        <div class="grid">
+            <img src="ttos4.png" alt="" style="width: 300px; margin-left: 10%;" class="imgcontainer">
+        </div>
+    </div>
+    <h4>사용자가 <b style="font-size: 1.2rem; color: dodgerblue;">음성</b>으로 택시를 호출하거나, <br>버스 노선을 조회할 수 있는 기능을 제공하는<br> <b style="font-size: 1.3rem;">콜맵</b>의 귀엽고 편리한 도우미 <b style="font-size: 1.2rem; color: #4CAF50;">새싹이</b> 입니다.</h4>
+</body>
+
+</html>

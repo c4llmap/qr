@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    html,
+    body {
+        background-color: #F1F1F1;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        
+    }
+
+    .grid {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
+
+    .grid_2 {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .box_2 {
+        width: 85%;
+        height: flex;
+        background-color: dodgerblue;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .box_3{
+        width: auto;
+        height: auto;
+        
+        border-radius: 10px;
+        display: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px auto;
+        margin-left: 65%;
+    }
+
+    /*pedometer bar*/
+    .progress-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            border-radius: 50%;
+        }
+
+        .progress-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .percentage-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            z-index: 2;
+        }
+
+        .center-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+        }
+
+    .box {
+        width: 70%;
+        color: aliceblue;
+        background-color: dodgerblue;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    h4 {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: seashell;
+        margin-top: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.2rem;
+        padding-top: 30px;
+    }
+
+    .wrapper {
+        border-radius: 2px;
+        box-sizing: border-box;
+        height: 150px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #000;
+        color: #000;
+        box-sizing: border-box;
+        font-family: 'Arvo';
+        font-size: 18px;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    input::placeholder {
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    input:focus::placeholder {
+        color: dodgerblue;
+    }
+
+    .input:focus+.underline {
+        transform: scale(1);
+    }
+
+    .underline {
+        background-color: dodgerblue;
+        display: inline-block;
+        height: 2px;
+        margin-top: 10px;
+        transform: scale(0, 1);
+        transition: all 0.5s linear;
+        width: 100%;
+    }
+
+    .listening {
+        color: red;
+    }
+
+    .banner-ad {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+    /*robot container*/
+    #robot-container {
+            position: relative;
+            width: 75px;
+            height: 75px;
+            align-items: center;
+            text-align: center;
+            justify-content:center;
+            
+        }
+
+        #robot-image {
+            width: 100%;
+            height: 100%;
+            border:0px solid;
+            border-radius: 50%;
+        }
+
+        .speech-bubble {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 11.5px;
+            padding: 10px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.9);
+            max-width: 200px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .show {
+            visibility: visible;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+    @media screen and (max-width: 767px) {
+        .grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        .box {
+            width: 90%;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+        }
+
+        .input {
+            font-size: 18px;
+        }
+
+        .wrapper {
+            width: 90%;
+        }
+    }
+</style>
+
+<body>
+    <!--img src="setting.png" style="justify-content: right; align-items: right; float: right; width: 30px; height: 30px; margin-bottom:5%;" alt=""-->
+    <div class="grid">
+        <div class="box">
+            <a href="#" id="voice-search">
+                <i class="fa fa-microphone" style="font-size:25px; color: seashell;"></i>
+                <h4 id="voice-status">길찾기</h4>
+            </a>
+        </div>
+        <div class="wrapper" style="margin-bottom:-65px;">
+            <img src="search.png" style="width: 35px; height: 35px; position: absolute;" alt="">
+            <input class="input" placeholder="백석대학교" type="text" id="destination-input">
+            <span class="underline"></span>
+        </div>
+        <!--div class="box">
+            <a href="tool.html">
+                <i class="fa fa-gear" style="font-size:25px; color: seashell;"></i>
+                <h4>편의기능</h4>
+            </a>
+        </div-->
+        <div class="box">
+            <a href="map_route.html">
+                <img src="bus.png" style="width: 45px; height: 35px;" alt="">
+                <h4>경로안내 시작</h4>
+            </a>
+        </div>
+    </div>
+
+    <div class="grid_2" style="margin-top:-120px;">
+        <div class="box_2">
+            <a href="bus_info.html" id="voice-search">
+                <img src="bus_stop.png" style="width: 45px; height: auto;" alt="">
+                <h4 id="voice-status">버스정보</h4>
+            </a>
+        </div>
+        <div class="box_2">
+            <a href="https://play.google.com/store/apps/details?id=com.enp.client.c.cheonahn&hl=ko&gl=US" id="voice-search">
+                <i class="fa fa-cab" style="font-size:25px; color: seashell; height: 50px;"></i>
+                <h4 id="voice-status">택시 호출</h4>
+            </a>
+        </div>
+
+        <div class="box_3">
+            <div class="progress-container">
+                <svg class="progress-svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" fill="#ddd" />
+                    <circle id="progress-bar" cx="50" cy="50" r="40" fill="transparent" stroke="dodgerblue" stroke-width="10" stroke-dasharray="0 251.32741228718345" transform="rotate(-90 50 50)" />
+                </svg>
+                <div class="center-content">
+                    <div id="robot-container">
+                        <img id="robot-image" src="robot.jpg" alt="Robot">
+                        <div class="speech-bubble" id="speech-bubble"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img class="banner-ad" src="banner.png" alt="Banner Ad">
+
+    <script>
+        const voiceSearchButton = document.getElementById("voice-search");
+        const destinationInput = document.getElementById("destination-input");
+        const voiceStatus = document.getElementById("voice-status");
+
+        // 음성 인식 버튼 클릭 시 음성 인식 시작
+        voiceSearchButton.addEventListener("click", () => {
+            if ('webkitSpeechRecognition' in window) {
+                const recognition = new webkitSpeechRecognition();
+                recognition.continuous = false;
+                recognition.interimResults = false;
+                recognition.lang = 'ko-KR';
+
+                recognition.start();
+
+                recognition.onstart = () => {
+                    voiceStatus.innerText = "음성 인식 중...";
+                    voiceStatus.classList.add("listening");
+                };
+
+                recognition.onresult = (event) => {
+                    const result = event.results[0][0].transcript;
+                    destinationInput.value = result;
+                };
+
+                recognition.onend = () => {
+                    recognition.stop();
+                    voiceStatus.innerText = "목적지 찾기";
+                    voiceStatus.classList.remove("listening");
+                };
+            } else {
+                alert('음성 인식을 지원하지 않는 브라우저입니다.');
+            }
+        });
+
+        /*robot container*/
+        const robotImage = document.getElementById('robot-image');
+    const speechBubble = document.getElementById('speech-bubble');
+    const sentences = [
+        '',
+        '안녕하세요!',
+        '오늘은 2500 걸음을 걸으셨어요!',
+        '저는 당신의 가이드 새싹이 입니다!',
+        '어떤 곳을 찾고 계신가요?',
+        '제게 말씀 해 주세요!',
+        '가까운 곳에 맛있는 음식점이 있네요!',
+        '주변의 편의시설이 궁금하신가요?',
+    ];
+
+    let index = 0;
+
+    setInterval(() => {
+        speechBubble.classList.remove('show');
+        setTimeout(() => {
+            index = (index + 1) % sentences.length;
+            speechBubble.innerText = sentences[index];
+            speechBubble.classList.add('show');
+        }, 500);
+    }, 2500);
+
+    /*pedomter*/
+    let currentPercentage = 25;
+        const maxPercentage = 25; 
+        const progressBar = document.getElementById('progress-bar');
+        const percentageDisplay = document.getElementById('percentage');
+
+        function updatePercentage() {
+            currentPercentage += 1;
+            if (currentPercentage > maxPercentage) {
+                currentPercentage = maxPercentage;
+            }
+
+            const dashArray = (currentPercentage / 100) * 251.32741228718345; // Circumference of a circle with radius 40
+            progressBar.style.strokeDasharray = `${dashArray} 251.32741228718345`;
+            percentageDisplay.textContent = `${currentPercentage}%`;
+        }
+
+        setInterval(updatePercentage, 100);
+    </script>
+</body>
+
+</html>
