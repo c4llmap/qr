@@ -380,7 +380,34 @@
             }
         });
 
+        /*robot container*/
+        const robotImage = document.getElementById('robot-image');
+    const speechBubble = document.getElementById('speech-bubble');
+    const sentences = [
+        '',
+        '안녕하세요!',
+        '"길찾기"를 누르고',
+        '가고 싶으신 곳을 말씀해주세요',
+        '"버스정보"라고 말씀 하시면',
+        '버스정보를 알려드릴게요',
+        '목적지를 설정 하시고',
+        '"경로안내"라 말씀 하세요',
+        '콜맵의 설정을 원하시나요?',
+    ];
 
+    let index = 0;
+
+    setInterval(() => {
+        speechBubble.classList.remove('show');
+        setTimeout(() => {
+            index = (index + 1) % sentences.length;
+            speechBubble.innerText = sentences[index];
+            speechBubble.classList.add('show');
+        }, 500);
+    }, 2500);
+
+
+    </script>
         
     </script>
 </body>

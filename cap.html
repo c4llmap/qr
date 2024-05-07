@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .taxi-button {
+            background-color: #ffc107;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .taxi-animation {
+            width: 50px;
+            height: 50px;
+            background-color: #ffc107;
+            border-radius: 50%;
+            position: absolute;
+            animation: taxiMove 3s linear infinite;
+        }
+
+        @keyframes taxiMove {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="taxi-button">택시 호출</button>
+    <div class="taxi-animation"></div>
+</body>
+</html>

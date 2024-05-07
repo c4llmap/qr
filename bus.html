@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F1F1F1;
+            color: #333;
+        }
+
+        #bus-info {
+            padding: 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #next-buses {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="bus-info">
+        <h2>버스 정보</h2>
+        <p>버스 번호: 13</p>
+        <p>출발지: 천안아산역</p>
+        <p>도착지: 단국대학교병원</p>
+
+        <h2>버스 정보</h2>
+        <p>버스 번호: 14</p>
+        <p>출발지: 방아다리공원</p>
+        <p>도착지: 백석대학교 (운동장)</p>
+    </div>
+
+    <div id="next-buses">
+        <h2>다음 버스</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>버스 번호</th>
+                    <th>도착 예정 시간</th>
+                    <th>도착지</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>13</td>
+                    <td style="color:red;"><b>약 2분후 도착</b></td>
+                    <td>단국대학교병원</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td style="color:red;"><b>약 4분후 도착</b></td>
+                    <td>백석대학교 (운동장)</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>약 10분후 도착</td>
+                    <td>단국대학교병원</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>약 12분후 도착</td>
+                    <td>부경파크빌, 안서e편한세상, 성불사</td>
+                </tr>
+                <tr>
+                    <td>70</td>
+                    <td style="color:blue;">20분 이상</td>
+                    <td>종합터미널</td>
+                </tr>
+                <tr>
+                    <td>71</td>
+                    <td style="color:blue;">20분 이상</td>
+                    <td>신부동회차지</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
