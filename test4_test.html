@@ -155,66 +155,6 @@
         color: seashell;
     }
 
-    /*robot container*/
-    #robot-container {
-            position: relative;
-            width: 75px;
-            height: 75px;
-            align-items: center;
-            text-align: center;
-            justify-content:center;
-            
-        }
-
-        #robot-image {
-            width: 100%;
-            height: 100%;
-            border:0px solid;
-            border-radius: 50%;
-        }
-
-        .speech-bubble {
-            position: absolute;
-            background-color: #fff;
-            border-radius: 11.5px;
-            padding: 10px;
-            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.9);
-            max-width: 200px;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            text-align: center;
-        }
-
-        #voice-search {
-    transition: background-color 0.6s ease-in-out;
-    border: 0px solid;
-    border-radius: 10px;
-}
-
-#voice-search:hover {
-    background-color: #2CDB26; /* 바꿀 색상 */
-    border: 0px solid;
-    border-radius: 10px;
-}
-
-.center-content {
-            margin-top: 5%;
-            margin-left: 75%;
-            text-align: center;
-            z-index: 1;
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        .show {
-            visibility: visible;
-            animation: fadeIn 0.5s ease forwards;
-        }
-
     @media screen and (max-width: 767px){
         h4 {
             font-size: 1.2rem;
@@ -243,13 +183,6 @@
             </div>
         </div>
 
-        <div class="center-content" id="voice-search">
-            <div id="robot-container">
-                <img id="robot-image" onclick="window.open('https://c4llmap.github.io/callmap3/voice.html')" src="robot.jpg" alt="Robot">
-                <div class="speech-bubble" id="speech-bubble"></div>
-            </div>
-        </div>
-
         <div class="box">
             <img src="kakaomap.png" class="imgwide" onclick="window.open('hovtest2.html')" style="width: 100%; height: 100%;">
             <h4>주변의 자세한 정보를 원하시면<br>이미지를 클릭 하세요</h4>
@@ -275,64 +208,6 @@
                 </a>
             </div>
         </div>
-
-        <script>
-            const voiceSearchButton = document.getElementById("voice-search");
-        const destinationInput = document.getElementById("destination-input");
-        const voiceStatus = document.getElementById("voice-status");
-
-        // 음성 인식 버튼 클릭 시 음성 인식 시작
-        voiceSearchButton.addEventListener("click", () => {
-            if ('webkitSpeechRecognition' in window) {
-                const recognition = new webkitSpeechRecognition();
-                recognition.continuous = false;
-                recognition.interimResults = false;
-                recognition.lang = 'ko-KR';
-
-                recognition.start();
-
-                recognition.onstart = () => {
-                    voiceStatus.innerText = "인식 중...";
-                    voiceStatus.classList.add("listening");
-                };
-
-                recognition.onresult = (event) => {
-                    const result = event.results[0][0].transcript;
-                    destinationInput.value = result;
-                };
-
-                recognition.onend = () => {
-                    recognition.stop();
-                    voiceStatus.innerText = "인식중...";
-                    voiceStatus.classList.remove("listening");
-                };
-            } else {
-                alert('음성 인식을 지원하지 않는 브라우저입니다.');
-            }
-        });
-
-
-            /*robot container*/
-        const robotImage = document.getElementById('robot-image');
-    const speechBubble = document.getElementById('speech-bubble');
-    const sentences = [
-        '',
-        '백석대학교에서\n천안역 까지 \n경로를 설정했어요',
-        '내 주변의 편의시설을\n찾고싶으시면 지도를\n클릭하세요',
-        '검색을 누르면 \n경로를 안내해 드려요',
-    ];
-
-    let index = 0;
-
-    setInterval(() => {
-        speechBubble.classList.remove('show');
-        setTimeout(() => {
-            index = (index + 1) % sentences.length;
-            speechBubble.innerText = sentences[index];
-            speechBubble.classList.add('show');
-        }, 500);
-    }, 2500);
-        </script>
     </body>
 
     </html>
