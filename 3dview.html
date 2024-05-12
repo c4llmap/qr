@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Street View</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #street-view {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="street-view"></div>
+
+    <script>
+        // Initialize street view
+        function initStreetView() {
+            var panorama = new google.maps.StreetViewPanorama(
+                document.getElementById('street-view'), {
+                    position: { lat: 36.819075, lng: 127.155761 }, // 천안시외버스터미널의 위도와 경도로 변경
+                    pov: { heading: 165, pitch: 0 }, // 시야 설정
+                    zoom: 1 // 줌 레벨
+                });
+
+            // 더블 클릭으로 확대 기능 비활성화
+            panorama.setOptions({ gestureHandling: 'greedy' });
+        }
+    </script>
+
+    <!-- Google Maps JavaScript API 로드 -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGhTKfSyUrOPvwe9y_Lw1vqA67B_DrvCw&callback=initStreetView" async defer></script>
+</body>
+</html>
