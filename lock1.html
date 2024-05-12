@@ -82,6 +82,12 @@
         .lock-screen.active .click-status {
             display: block;
         }
+        .subtitle{
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+  }
     </style>
 </head>
 
@@ -97,6 +103,7 @@
                 <div class="progress-bar-fill" id="progressBarFill"></div>
             </div>
         </div>
+        <p class="subtitle">/* 이미지를 3번 클릭 하면 <br>다음으로 넘어 갑니다. */</p>
         <div class="click-status" id="clickStatus">클릭 횟수: 0 / 3</div>
     </div>
 
@@ -109,12 +116,12 @@
             var now = new Date();
             var hours = now.getHours();
             var minutes = now.getMinutes();
-            var ampm = hours >= 12 ? 'PM' : 'AM';
+            var ampm = hours >= 12 ? '오후' : '오전';
             hours = hours % 12;
             hours = hours ? hours : 12;
             minutes = minutes < 10 ? '0' + minutes : minutes;
             var timeString = hours + ':' + minutes + ' ' + ampm;
-            var dateString = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            var dateString = now.toLocaleDateString('ko-KR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
             document.getElementById('time').textContent = timeString;
             document.getElementById('date').textContent = dateString;
         }

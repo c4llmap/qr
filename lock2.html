@@ -49,12 +49,6 @@
         .phone-info-form {
             width: 80%;
             margin-top: 20px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .phone-container.active .phone-info-form {
-            opacity: 1;
         }
 
         .phone-info-form input {
@@ -76,7 +70,6 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
         }
 
         .phone-info-form button:hover {
@@ -86,7 +79,7 @@
 </head>
 
 <body>
-    <div class="phone-container" onclick="togglePhone()">
+    <div class="phone-container">
         <h2>전화 거는 중</h2>
         <p>나의 정보:</p>
         <form class="phone-info-form">
@@ -96,13 +89,6 @@
             <button onclick="window.open('invitation.html')">전화 걸기</button>
         </form>
     </div>
-
-    <script>
-        function togglePhone() {
-            var phoneContainer = document.querySelector('.phone-container');
-            phoneContainer.classList.toggle('active');
-        }
-    </script>
 </body>
 
 </html>
