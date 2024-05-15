@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Bus Stops Near Cheonan Express Bus Terminal</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGhTKfSyUrOPvwe9y_Lw1vqA67B_DrvCw&libraries=places&callback=initMap" async defer></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #map-container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        #map {
+            height: 100%;
+            width: 70%;
+            float: left;
+        }
+
+        #sidebar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 30%;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        .bus-stop-item {
+            cursor: pointer;
+            margin-bottom: 10px;
+            padding: 5px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .bus-stop-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .bus-stop-name {
+            font-weight: bold;
+        }
+
+        .bus-stop-address {
+            font-style: italic;
+        }
+    </style>
+    <script>
+        let map, service, markers = [];
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 36.841102, lng: 127.181816 }, 
+                zoom: 15,
+            });
+            service = new google.maps.places.PlacesService(map);
+            findBusStops();
+        }
+
+        function findBusStops() {
+            const request = {
+                location: { lat: 36.841102, lng: 127.181816 }, 
+                radius: 1000, 
+                type: "bus_station", 
+            };
+            service.nearbySearch(request, (results, status) => {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    results.slice(0, 10).forEach((place, index) => {
+                        createMarker(place);
+                        updateSidebar(place, index);
+                    });
+                }
+            });
+        }
+
+        function createMarker(place) {
+            const marker = new google.maps.Marker({
+                position: place.geometry.location,
+                map,
+                title: place.name,
+            });
+            markers.push(marker);
+
+            const infowindow = new google.maps.InfoWindow({
+                content: `<div><strong>${place.name}</strong><br>${place.vicinity}</div>`
+            });
+
+            marker.addListener("click", () => {
+                infowindow.open(map, marker);
+            });
+        }
+
+        function updateSidebar(place, index) {
+            const sidebar = document.getElementById("sidebar");
+            const listItem = document.createElement("div");
+            listItem.classList.add("bus-stop-item");
+            listItem.innerHTML = `
+                <div class="bus-stop-name">${place.name}</div>
+                <div class="bus-stop-address">${place.vicinity}</div>
+            `;
+            listItem.addEventListener("click", () => {
+                google.maps.event.trigger(markers[index], "click");
+                map.panTo(markers[index].getPosition());
+            });
+            sidebar.appendChild(listItem);
+        }
+    </script>
+</head>
+<body>
+    <div id="map-container">
+        <div id="map"></div>
+        <div id="sidebar"></div>
+    </div>
+</body>
+</html>

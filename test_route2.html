@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Route Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .search-form {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .search-form input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .search-form button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #mapIframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search-form">
+            <input type="text" id="startInput" placeholder="출발지를 입력하세요" value="천안백석대학교">
+            <input type="text" id="endInput" placeholder="도착지를 입력하세요" value="천안역">
+            <button onclick="showRoute()">경로 보기</button>
+        </div>
+        <iframe id="mapIframe" frameborder="0"></iframe>
+    </div>
+
+    <script>
+        function showRoute() {
+            var start = document.getElementById("startInput").value;
+            var end = document.getElementById("endInput").value;
+            var mapUrl = `https://m.map.naver.com/routes/?start=${encodeURIComponent(start)}&destination=${encodeURIComponent(end)}`;
+            document.getElementById("mapIframe").src = mapUrl;
+        }
+    </script>
+</body>
+</html>

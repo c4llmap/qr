@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .search-form {
+            margin-bottom: 20px;
+            display: flex;
+        }
+        .search-form input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-form button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        #mapIframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search-form">
+            <input type="text" id="locationInput" placeholder="위치를 입력하세요">
+            <button onclick="searchLocation()">검색</button>
+        </div>
+        <iframe id="mapIframe" src="" frameborder="0"></iframe>
+    </div>
+
+    <script>
+        function searchLocation() {
+            var location = document.getElementById("locationInput").value;
+            var mapUrl = `https://m.map.naver.com/search2/search.nhn?query=${encodeURI(location)}`;
+            document.getElementById("mapIframe").src = mapUrl;
+        }
+    </script>
+</body>
+</html>
